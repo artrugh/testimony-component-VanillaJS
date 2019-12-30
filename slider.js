@@ -36,7 +36,7 @@ export const slider = (testimony, className, settime) => {
 
     //crate the balls counter
     const counterContainer = document.createElement("div");
-    counterContainer.id = "counterContainer";
+    counterContainer.id = "counter-container";
 
     //loop inside the array of testimony
     for (let i = 0; i < testimony.length; i++) {
@@ -44,7 +44,7 @@ export const slider = (testimony, className, settime) => {
         // create the main container
         const testimonyContainer = document.createElement("div");
         testimonyContainer.id = testimony[i].name;
-        
+
         // the testimony
         const text = document.createElement("p");
         text.className = "text";
@@ -94,6 +94,5 @@ export const slider = (testimony, className, settime) => {
     transition(settime, counterBalls, 'counter');
 
     sliderWrapper.style.height = `${document.querySelector(".testimony").getBoundingClientRect().height}px`;
-    
-}
 
+}

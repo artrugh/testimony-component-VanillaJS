@@ -46,16 +46,16 @@
         color: white;
         font-size: 1.5em;
         margin-left: 30px; }
-  #container #counterContainer {
+  #container #counter-container {
     display: flex;
     justify-content: center; }
-    #container #counterContainer .counter {
+    #container #counter-container .counter {
       background-color: rgba(109, 88, 88, 0.5);
       border-radius: 100%;
       width: 12px;
       height: 12px;
       margin: 5px; }
-    #container #counterContainer .active {
+    #container #counter-container .active {
       transition: background-color 3s ease-out;
       background-color: red; }
 
