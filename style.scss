@@ -1,0 +1,89 @@
+* {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+// ::-webkit-scrollbar {
+//     display: none;
+// }
+
+#container {
+    border: 2px solid yellow;
+    padding: 100px;
+    background-color: black;
+
+    .position-slider {
+        position: relative;
+
+        .testimony {
+            position: absolute;
+            background-color: black;
+            width: 0;
+            right: -97vw;
+            transition: right 1.5s ease;
+            // border: 1px solid red
+        }
+
+        .pre {
+            transition: width 3s ease-out;
+            width: 100%;
+            right: 100vw;
+            transition: right 3s ease;
+        }
+
+        .active {
+            transition: width 3s ease-out;
+            width: 100%;
+            right: 0;
+            transition: right 3s ease;
+            z-index: 1;
+        }
+
+        .text {
+            color: white;
+            text-align: justify;
+        }
+
+        .client-details {
+            display: flex;
+            align-items: center;
+            padding: 30px 0;
+
+            .portrait {
+                width: 70px;
+                height: 70px;
+                border-radius: 100%;
+                background-position: center;
+                background-size: cover;
+                border: 2px solid white;
+            }
+
+            .client-name {
+                color: white;
+                font-size: 1.5em;
+                margin-left: 30px;
+            }
+        }
+    }
+
+    #counterContainer {
+        display: flex;
+        justify-content: center;
+
+        .counter {
+            background-color: rgba(109, 88, 88, 0.5);
+            border-radius: 100%;
+            width: 12px;
+            height: 12px;
+            margin: 5px;
+        }
+
+        .active {
+            transition: background-color 3s ease-out;
+            background-color: red;
+        }
+    }
+}
