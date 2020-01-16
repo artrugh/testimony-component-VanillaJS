@@ -1,9 +1,8 @@
 // slider.js
 
 const transition = (settime, testimonies, originalClassName, index = 0) => {
-
-    if (index < testimonies.length) {
-        setTimeout(() => {
+    setTimeout(() => {
+        if (index < testimonies.length) {
             // clean all posible active class setting all the items whith the image class
             [...testimonies].map(item => item.className = originalClassName);
             // toggle the class to active
@@ -16,12 +15,12 @@ const transition = (settime, testimonies, originalClassName, index = 0) => {
                 testimonies[index - 1].classList.toggle('pre')
             }
             transition(settime, testimonies, originalClassName, index + 1)
-        }, settime)
 
-    } else {
-        // create and infinite loop of the slider effect
-        transition(settime, testimonies, originalClassName, 0)
-    }
+        } else {
+            // create and infinite loop of the slider effect
+            transition(settime, testimonies, originalClassName, 0)
+        }
+    }, settime)
 }
 
 // main function 
@@ -83,7 +82,6 @@ export const slider = (testimony, className, settime) => {
         container.appendChild(counterContainer);
 
     }
-
 
     // select all the images from the DOM which have already been created
     const testimonies = document.querySelectorAll(".testimony");
